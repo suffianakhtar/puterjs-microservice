@@ -1,0 +1,16 @@
+{
+  "name": "puter-micrsrvc",
+  "version": "1.0.0",
+  "description": "A simple Node, Express microservice relaying calls to Puter.js and exposing a RESTFul API",
+  "license": "ISC",
+  "author": "Suffian",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "dev": "node --watch --env-file=.env ./src/server.js"
+  },
+  "dependencies": {
+     "@heyputer/puter.js": "^2.1.9",
+    "express": "^5.2.1"
+  }
+}
