@@ -1,0 +1,77 @@
+{
+  "providers": [
+    {
+      "name": "OpenAI",
+      "models": [
+        { "id": "gpt-image-1.5", "settings": null },
+        { "id": "gpt-image-1", "settings": { "quality": ["high", "medium", "low"], "default": "low" } },
+        { "id": "gpt-image-1-mini", "settings": { "quality": ["high", "medium", "low"], "default": "low" } },
+        { "id": "dall-e-3", "settings": { "quality": ["hd", "standard"], "default": "standard" } },
+        { "id": "dall-e-2", "settings": null }
+      ]
+    },
+    {
+      "name": "Google",
+      "models": [
+        { "id": "gemini-2.5-flash-image-preview", "settings": null },
+        { "id": "google/flash-image-2.5", "settings": null },
+        { "id": "google/imagen-4.0-fast", "settings": null },
+        { "id": "google/imagen-4.0-preview", "settings": null },
+        { "id": "google/imagen-4.0-ultra", "settings": null }
+      ]
+    },
+    {
+      "name": "Black Forest Labs",
+      "models": [
+        { "id": "black-forest-labs/FLUX.1-pro", "settings": null },
+        { "id": "black-forest-labs/FLUX.1.1-pro", "settings": null },
+        { "id": "black-forest-labs/FLUX.1-dev", "settings": null },
+        { "id": "black-forest-labs/FLUX.1-schnell", "settings": null },
+        { "id": "black-forest-labs/FLUX.1-schnell-Free", "settings": null },
+        { "id": "black-forest-labs/FLUX.1-Canny-pro", "settings": null },
+        { "id": "black-forest-labs/FLUX.1-dev-lora", "settings": null },
+        { "id": "black-forest-labs/FLUX.1-kontext-dev", "settings": null },
+        { "id": "black-forest-labs/FLUX.1-kontext-max", "settings": null },
+        { "id": "black-forest-labs/FLUX.1-kontext-pro", "settings": null },
+        { "id": "black-forest-labs/FLUX.1-krea-dev", "settings": null }
+      ]
+    },
+    {
+      "name": "ByteDance",
+      "models": [
+        { "id": "ByteDance-Seed/Seedream-3.0", "settings": null },
+        { "id": "ByteDance-Seed/Seedream-4.0", "settings": null }
+      ]
+    },
+    {
+      "name": "Stability AI",
+      "models": [
+        { "id": "stabilityai/stable-diffusion-3-medium", "settings": null },
+        { "id": "stabilityai/stable-diffusion-xl-base-1.0", "settings": null }
+      ]
+    },
+    {
+      "name": "RunDiffusion",
+      "models": [
+        { "id": "RunDiffusion/Juggernaut-pro-flux", "settings": null },
+        { "id": "Rundiffusion/Juggernaut-Lightning-Flux", "settings": null }
+      ]
+    },
+    {
+      "name": "HiDream AI",
+      "models": [
+        { "id": "HiDream-ai/HiDream-I1-Dev", "settings": null },
+        { "id": "HiDream-ai/HiDream-I1-Fast", "settings": null },
+        { "id": "HiDream-ai/HiDream-I1-Full", "settings": null }
+      ]
+    },
+    {
+      "name": "Other",
+      "models": [
+        { "id": "ideogram/ideogram-3.0", "settings": null },
+        { "id": "Qwen/Qwen-Image", "settings": null },
+        { "id": "Lykon/DreamShaper", "settings": null }
+      ]
+    }
+  ]
+}

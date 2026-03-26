@@ -1,6 +1,3 @@
-import Puter from '../PuterClient.js';
-
-
 const generateImage = (req, res, next) => {
     return res.json({message: 'Success'})
 };
