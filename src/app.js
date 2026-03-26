@@ -1,6 +1,8 @@
 import express from 'express';
 
+
 import ImageRouter from './routes/images.routes.js';
+import ConfigRouter from './routes/config.routes.js';
 
 const app = express();
 
@@ -14,5 +16,6 @@ app.use((req, res, next) => {
 });
 
 app.use("/images", ImageRouter);
- 
+app.use("/config", ConfigRouter);
+
 export default app;
