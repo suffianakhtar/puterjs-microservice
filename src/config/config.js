@@ -1,8 +1,6 @@
-
-
 const config = {
-  model: process.env.DEFAULT_MODEL || 'flux-1-dev',
-  provider: process.env.DEFULAT_PROVIDER || 'together',
+  provider: process.env.DEFAULT_IMAGE_PROVIDER || 'togetherai',
+  model: process.env.DEFAULT_IMAGE_MODEL || 'togetherai:black-forest-labs/flux.1-dev'
 };
 
 export default config;

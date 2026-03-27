@@ -3,7 +3,7 @@ import Puter from '../PuterClient.js';
 import models from '../config/models.json' with { type: 'json' };
 
 const imageModelProviders = models.providers.map(p => p.name);
-const imageModels = models.providers.flatMap(p => p.models.map(m => m.id));
+const imageModels = models.providers.flatMap(p => p.models.map(m => m));
 
 const getConfig = (req, res, next) => {
   res.status(200).json({ model: config.model, provider: config.provider });
