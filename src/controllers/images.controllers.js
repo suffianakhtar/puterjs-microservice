@@ -30,8 +30,8 @@ const generateImage = async (req, res, next) => {
                     test_mode: testMode
                 });
             } catch (err) {
-                err.statusCode = 500;
-                next(err);
+                err.statusCode = err.error.status || 500;
+                return next(err);
             }
             break;
         }
@@ -47,8 +47,8 @@ const generateImage = async (req, res, next) => {
                     test_mode: testMode
                 });
             } catch (err) {
-                err.statusCode = 500;
-                next(err);
+                err.statusCode = err.error.status || 500;
+                return next(err);
             }
             break;
         }
@@ -57,7 +57,6 @@ const generateImage = async (req, res, next) => {
             const width = req.body.width || 1024;
             const height = req.body.height || 768;
             const num_steps = req.body.num_steps || 30;
-            const guidance = req.body.guidance || 7.5;
             const seed = req.body.seed || 12345;
             const negative_prompt = req.body.negative_prompt || negativePrompt;
             try {
@@ -67,15 +66,14 @@ const generateImage = async (req, res, next) => {
                     width,
                     height,
                     num_steps,
-                    guidance,
                     seed,
                     negative_prompt,
                     disable_safety_checker: disableSafetyChecker,
                     test_mode: testMode
                 });
             } catch (err) {
-                err.statusCode = 500;
-                next(err);
+                err.statusCode = err.error.status || 500;
+                return next(err);
             }
             break;
         }
@@ -84,7 +82,6 @@ const generateImage = async (req, res, next) => {
             const width = req.body.width || 1024;
             const height = req.body.height || 768;
             const num_steps = req.body.num_steps || 30;
-            const guidance = req.body.guidance || 7.5;
             const seed = req.body.seed || 12345;
             const negative_prompt = req.body.negative_prompt || negativePrompt;
             try {
@@ -94,15 +91,14 @@ const generateImage = async (req, res, next) => {
                     width,
                     height,
                     num_steps,
-                    guidance,
                     seed,
                     negative_prompt,
                     disable_safety_checker: disableSafetyChecker,
                     test_mode: testMode
                 });
             } catch (err) {
-                err.statusCode = 500;
-                next(err);
+                err.statusCode = err.error.status || 500;
+                return next(err);
             }
             break;
         }
@@ -115,8 +111,8 @@ const generateImage = async (req, res, next) => {
                     test_mode: testMode
                 });
             } catch (err) {
-                err.statusCode = 500;
-                next(err);
+                err.statusCode = err.error.status || 500;
+                return next(err);
             }
             break;
         }

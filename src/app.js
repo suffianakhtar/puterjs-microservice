@@ -17,10 +17,10 @@ app.use((req, res, next) => {
 app.use('/images', ImageRouter);
 app.use('/config', ConfigRouter);
 
-app.use((error, req, res, next) => {
+app.use((err, req, res, next) => {
   return res
-    .status(error.statusCode || 500)
-    .json({ status: 'error', message: error.message || 'An unexpected error occurred' });
+    .status(err.statusCode || 500)
+    .json({ status: 'error', message: err.error.message || 'An unexpected error occurred' });
 });
 
 export default app;
