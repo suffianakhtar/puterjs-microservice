@@ -12,8 +12,10 @@ const getConfig = (req, res, next) => {
 const setConfig = (req, res, next) => {
   const { model, provider } = req.body;
   
-  if (!model || !provider) {
-    return res.status(400).json({ error: 'model and provider are required' });
+  if (!model) {
+    const error = new Error('Model is required');
+    error.statusCode = 400;
+    return next(error);
   }
 
   config.model = model;
@@ -37,7 +39,7 @@ const getImageModelProviders = async (req, res, next) => {
 };
 
 const getImageModels = (req, res, next) => {
-  const selectedProvider = req.query.provider;
+  const selectedProvider = req.query?.provider.toLowerCase();
   if (!selectedProvider) {
     const error = new Error('Provider not specified');
     error.statusCode = 400;
@@ -51,7 +53,7 @@ const getImageModels = (req, res, next) => {
 
   const error = new Error(`Provider: ${selectedProvider} not found!`);
   error.statusCode = 404;
-  next(error);
+  return next(error);
 };
 
 export {

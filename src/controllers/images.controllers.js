@@ -30,7 +30,7 @@ const generateImage = async (req, res, next) => {
                     test_mode: testMode
                 });
             } catch (err) {
-                err.statusCode = err.error.status || 500;
+                err.statusCode = err.error.status;
                 return next(err);
             }
             break;
@@ -47,7 +47,7 @@ const generateImage = async (req, res, next) => {
                     test_mode: testMode
                 });
             } catch (err) {
-                err.statusCode = err.error.status || 500;
+                err.statusCode = err.error.status;
                 return next(err);
             }
             break;
@@ -72,7 +72,7 @@ const generateImage = async (req, res, next) => {
                     test_mode: testMode
                 });
             } catch (err) {
-                err.statusCode = err.error.status || 500;
+                err.statusCode = err.error.status;
                 return next(err);
             }
             break;
@@ -97,7 +97,7 @@ const generateImage = async (req, res, next) => {
                     test_mode: testMode
                 });
             } catch (err) {
-                err.statusCode = err.error.status || 500;
+                err.statusCode = err.error.status;
                 return next(err);
             }
             break;
@@ -111,7 +111,7 @@ const generateImage = async (req, res, next) => {
                     test_mode: testMode
                 });
             } catch (err) {
-                err.statusCode = err.error.status || 500;
+                err.statusCode = err.error.status;
                 return next(err);
             }
             break;
