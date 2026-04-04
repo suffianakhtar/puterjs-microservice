@@ -53,7 +53,7 @@ const generateImage = async (req, res, next) => {
             break;
         }
 
-         case 'togetherai': {
+        case 'togetherai': {
             const width = req.body.width || 1024;
             const height = req.body.height || 768;
             const num_steps = req.body.num_steps || 30;
@@ -104,6 +104,20 @@ const generateImage = async (req, res, next) => {
         }
 
         case 'x-ai': {
+            try {
+                image = await Puter.ai.txt2img(prompt, {
+                    provider,
+                    model,
+                    test_mode: testMode
+                });
+            } catch (err) {
+                err.statusCode = err.error.status;
+                return next(err);
+            }
+            break;
+        }
+
+        default: {
             try {
                 image = await Puter.ai.txt2img(prompt, {
                     provider,
